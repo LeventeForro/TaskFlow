@@ -146,7 +146,7 @@ TaskFlow is an ongoing personal development project. New features and improvemen
 
 ## Author
 
-**Levente Forró*
+**Levente Forró**
 
 Aspiring Full-Stack Developer
 

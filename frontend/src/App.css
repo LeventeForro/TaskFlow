@@ -707,3 +707,61 @@ h2 {
     font-size: 8px;
   }
 }
+
+/* NAVIGATION BUTTON RESET */
+
+.nav-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  text-align: left;
+}
+
+/* TASK FILTERS */
+
+.task-tools {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.filter-select {
+  max-width: 165px;
+  padding: 9px 10px;
+  border: 1px solid #e8eaf1;
+  border-radius: 8px;
+  outline: none;
+  background: #fafbfe;
+  color: #697187;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #9385f3;
+  box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.09);
+}
+
+/* OVERDUE TASKS */
+
+.due-date.overdue {
+  color: #df6969;
+  font-weight: 700;
+}
+
+/* RESPONSIVE FILTERS */
+
+@media (max-width: 600px) {
+  .task-tools {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-select {
+    max-width: none;
+    width: 100%;
+  }
+}

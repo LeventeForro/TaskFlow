@@ -1,9 +1,9 @@
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
-from database import get_connection, create_tables
-from fastapi.middleware.cors import CORSMiddleware
+from backend.database import get_connection, create_tables
 
 app = FastAPI(title="Task Manager API")
 

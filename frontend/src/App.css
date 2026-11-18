@@ -765,3 +765,304 @@ h2 {
     width: 100%;
   }
 }
+
+/* Feladatműveletek */
+.task-title-button {
+  border: none;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.task-title-button strong {
+  transition: color 0.2s ease;
+}
+
+.task-title-button:hover strong {
+  color: #7867e8;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.action-button,
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #8b91a3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.action-button {
+  width: 32px;
+  height: 32px;
+}
+
+.action-button:hover {
+  background: #f0edff;
+  color: #7867e8;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Modal háttér */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 23, 38, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+/* Modal ablak */
+.task-modal {
+  width: 100%;
+  max-width: 540px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #ececf3;
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(20, 23, 38, 0.2);
+  animation: modal-appear 0.18s ease-out;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.modal-header h2 {
+  margin: 7px 0 0;
+  color: #202438;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.modal-close {
+  width: 36px;
+  height: 36px;
+  background: #f5f5f9;
+}
+
+.modal-close:hover {
+  background: #eceaf7;
+  color: #7867e8;
+}
+
+/* Szerkesztő űrlap */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-form label {
+  margin-top: 8px;
+  color: #555d72;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #e5e7ef;
+  border-radius: 9px;
+  outline: none;
+  background: #fafbfe;
+  color: #292d40;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.edit-form textarea {
+  resize: vertical;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus,
+.edit-form select:focus {
+  border-color: #9385f3;
+  box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.1);
+}
+
+.field-hint {
+  margin: 0;
+  color: #9298a9;
+  font-size: 11px;
+}
+
+/* Részletes nézet */
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.detail-title-row h3 {
+  margin: 0;
+  color: #25293d;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.detail-section {
+  padding: 17px;
+  border: 1px solid #ececf3;
+  border-radius: 11px;
+  background: #fafbfe;
+}
+
+.detail-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #9298a9;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.detail-section p {
+  margin: 0;
+  color: #555d72;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.detail-item {
+  padding: 14px;
+  border: 1px solid #ececf3;
+  border-radius: 10px;
+}
+
+.detail-item strong {
+  display: block;
+  color: #30354a;
+  font-size: 13px;
+}
+
+/* Modal gombok */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.modal-actions .submit-button,
+.modal-actions .secondary-button {
+  width: auto;
+  margin-top: 0;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 15px;
+  border: 1px solid #e5e7ef;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #60677a;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.secondary-button:hover {
+  background: #f5f5fa;
+  border-color: #d7d8e4;
+}
+
+@media (max-width: 700px) {
+  .task-row {
+    flex-wrap: wrap;
+  }
+
+  .task-info {
+    flex: 1;
+  }
+
+  .task-actions {
+    margin-left: auto;
+  }
+
+  .task-modal {
+    padding: 21px;
+  }
+}
+
+@media (max-width: 420px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .modal-actions .submit-button,
+  .modal-actions .secondary-button {
+    width: 100%;
+  }
+}
+

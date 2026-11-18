@@ -1,17 +1,34 @@
-#Python
+
+# Python
 __pycache__/
 *.py[cod]
+*.pyo
 .venv/
+venv/
+.pytest_cache/
+.mypy_cache/
 
-#Node
+# Node.js
 node_modules/
 dist/
+.npm/
+*.log
 
-# Enviroment variables
+# Environment variables
 .env
+.env.*
+!.env.example
 
-#IDE
+# IDE and editor
 .vscode/
+.idea/
+*.swp
 
-#Database
+# Database
 *.db
+*.sqlite
+*.sqlite3
+
+# Operating system
+.DS_Store
+Thumbs.db
